@@ -16,3 +16,14 @@ end
 
 puts cipher("hello",3)
 puts cipher("zoo", 4)
+
+#digital_root
+
+def digital_root(num)
+  until num < 10
+    num = num/10 + num%10
+  end
+  num
+end
+
+puts digital_root(25032)
