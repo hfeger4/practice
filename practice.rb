@@ -46,5 +46,18 @@ def fibs(num)
 
   prev = fibs(num-1)
   prev << prev[-1] + prev[-2]
-  prev 
+  prev
+end
+
+puts fibs(10)
+
+def fibs(num)
+  return [] if num == 0
+  return [0] if num == 1
+
+  fibs = [0,1]
+  while fibs.count < num
+    fibs << fibs[-1] + fibs[-2]
+  end
+  fibs 
 end
