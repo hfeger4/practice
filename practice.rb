@@ -27,3 +27,24 @@ def digital_root(num)
 end
 
 puts digital_root(25032)
+
+#sum_Recursive
+
+def sum_recurve(nums)
+  return 0 if nums.empty?
+  nums[-1] + sum_recurve(nums[0..-2])
+end
+
+puts sum_recurve([1,2,3,4])
+
+#fibinocci
+
+def fibs(num)
+  return [] if num == 0
+  return [0] if num == 1
+  return [0,1] if num == 2
+
+  prev = fibs(num-1)
+  prev << prev[-1] + prev[-2]
+  prev 
+end
